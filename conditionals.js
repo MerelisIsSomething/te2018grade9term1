@@ -8,7 +8,12 @@ console.log("*** Problem 1: R-rated ***");
 let age = READLINE.question("Enter your age: ");
 let withAdult = READLINE.question("Are you with an adult? (yes or no): ");
 
-
+if(age>=18 || withAdult == "yes")  {
+	console.log('Congrats! You can see the moive!');
+}
+else {
+	console.log("Sorry... You can't see the movie.");
+}
 // **** Problem 2: Umbrella ****
 // You should bring an umbrella when you travel, but only if it is raining.
 // However, if it is thunderstorming, you should not bring an umbrella since
@@ -18,7 +23,18 @@ console.log("*** Problem 2: Umbrella ***");
 let raining = READLINE.question("Is it raining? (yes or no): ");
 let thunderstorming = READLINE.question("Is it thunderstorming? (yes or no): ");
 
+if(raining== "yes" && thunderstorming== "no") {
+	console.log("You should you bring an umbrella. Stay dry!"); 
 
+}
+else {
+	if(raining== "no" && thunderstorming== "no") {
+		console.log("Don't waste time bringing your umbrella. You'll be dry no matter what!");
+	}
+}
+if(thunderstorming== "yes") {
+	console.log("I wouldn't reccomend you to bring an umbrella. Don't want you having any bad luck buddy.");
+}
 // **** Problem 3: Monkey Trouble ****
 // There are two monkeys: Bubbles and Spankey. You are in trouble if both of
 // them are smiling, or if neither are smiling. Write code that prints if we
@@ -27,7 +43,14 @@ console.log("*** Problem 3: Monkey Trouble ***");
 let bubbles = READLINE.question("Is Bubbles smiling? (yes or no): ");
 let spankey = READLINE.question("Is Spankey smiling? (yes or no): ");
 
+if(Bubbles && Spankey smiling== "yes" || Bubbles && Spankey smiling== "no") {
+	console.log("Sorry. Now you are in trouble. Bad luck for you.")
+}
+else {
+	if(Bubbles smiling== "yes" && Spankey smiling== "no" || Bubbles smiling== "no" && Spankey smiling== "yes")
+		console.log("Good job. You are scotch free from being in trouble.")
 
+}
 // **** Problem 4: First Place ****
 // Write code that prints the largest of three scores. If there is a tie for
 // first place, simply print one of the tie winners.
@@ -59,3 +82,19 @@ let money = READLINE.question("How much money do you have?: ");
 console.log("*** Problem 6: Guess My Number ***");
 let myNum = 5;
 let guess = READLINE.question("I'm thinking of a number. Guess it: ");
+if(guess < 5) {
+	console.log("Too low.")
+}
+if(guess > 5) {
+	console.log("Too high.")
+}
+if(guess = 5) {
+	console.log("Correct!")
+}
+
+
+
+
+
+
+
